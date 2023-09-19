@@ -1008,7 +1008,7 @@ class UnsteadyRingVortexLatticeMethodSolver:
             )
         )
         unsteady_near_field_forces_geometry_axes = (
-            self.current_operating_point.density
+             - self.current_operating_point.density
             * np.expand_dims(
                 (self.current_vortex_strengths - self.last_panel_vortex_strengths),
                 axis=1,
